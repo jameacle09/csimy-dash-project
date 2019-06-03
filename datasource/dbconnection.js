@@ -37,4 +37,4 @@ mongoose.connect('mongodb://localhost:27017/country', { useNewUrlParser: true}, 
 });
 // end mongodb connection
 
-//require('./country.model');
+require('../model/country');

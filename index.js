@@ -29,7 +29,11 @@ logger.addContext('log', 'dash' + dateformat(new Date(), "yyyymmdd"));
 var app = express();
 app.listen(port, () => {
     logger.info('Server started at port ' + port);
+    console.log('Server started....');
 });
+
+//include static files
+app.use(express.static('public'));
 
 app.use('/personal-details', personalDetailsController);
 app.set('views', path.join(__dirname, '/views/'));
